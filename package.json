@@ -1,0 +1,22 @@
+{
+  "name": "pruebasunitariasreact",
+  "version": "1.0.0",
+  "description": "Pruebas unitarias con Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardofrp5/PruebasUnitariasReact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonardofrp5/PruebasUnitariasReact/issues"
+  },
+  "homepage": "https://github.com/leonardofrp5/PruebasUnitariasReact#readme",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
