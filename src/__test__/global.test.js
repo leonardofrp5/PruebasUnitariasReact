@@ -28,7 +28,7 @@ test('Test Callback', () => {
   })
 });
 
-const reverseString2 = () => {
+reverseString2 = (str) => {
   return new Promise((resolve, reject) => {
     if(!str) {
       reject(Error('Error'));
@@ -37,9 +37,27 @@ const reverseString2 = () => {
   })
 };
 
-test('Prueba Callback', () => {
+it('Prueba Callback', () => {
   reverseString2('Hola')
-  .then(string => {
-    expect(string).toBe('aloH');
-  })
+  .then(string => expect(string).toBe('aloH'))
 })
+ 
+reverseString3 = (str) => {
+  return new Promise((resolve, reject) => {
+    if(!str) {
+      reject(Error('Error'));
+    }
+    resolve(str.split("").reverse().join(""));
+  });
+}
+
+it('Prueba con Asyn', async  () => {
+  const result = await reverseString3('Hola');
+  expect(result).toBe('aloH');
+})
+
+
+afterEach( () =>console.log('Despues de cada prueba') );
+afterAll( () =>console.log('Despues de todas las pruebas') );
+beforeEach( () =>console.log('antes de cada prueba') );
+beforeAll( () =>console.log('antes de todas las pruebas') );
